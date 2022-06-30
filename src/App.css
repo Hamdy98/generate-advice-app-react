@@ -1,0 +1,125 @@
+/* Google Font(Poppins) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Global */
+#root, html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.app {
+  height: 100%;
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("./img/city.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  background-color: whitesmoke;
+  width: 60%;
+  height: 40%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 25px;
+  padding: 2%;
+  box-shadow: 10px 10px;
+}
+.heading {
+  display: flex;
+  align-items: center;
+  height: 582px;
+  font-weight: 600;
+}
+.parentOfButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button {
+  position: relative;
+  outline: none;
+  text-decoration: none;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 15px;
+  margin: 0 10px;
+  opacity: 1;
+  background-color: #fff;
+  border: 1px solid rgba(22, 76, 167, 0.6);
+  transition: all 0.3s;
+}
+.button span {
+  color: #164ca7;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+  transition: all 0.3s;
+}
+.button:hover {
+  animation: rotate 0.7s ease-in-out both;
+  background-color: #164ca7;
+}
+.button:hover span {
+  animation: storm 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+  color: #fff;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+@keyframes storm {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 85%;
+    height: 45%;
+  }
+  .button {
+    padding: 10px;
+    margin: 3px;
+  }
+  .heading {
+    font-size: 24px;
+  }
+}
